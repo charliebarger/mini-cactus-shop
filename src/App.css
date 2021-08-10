@@ -1,0 +1,118 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  height: 100vh;
+  margin: 0px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  font-family: "Bahianita", cursive;
+  height: 75px;
+
+  box-shadow: 0 0 5px grey;
+}
+
+.nav-item {
+  color: #88bb3d;
+  text-decoration: none;
+  font-size: 24px;
+  margin-right: 40px;
+}
+
+img {
+  max-height: 100%;
+}
+
+.img-wrapper {
+  height: 100%;
+}
+
+.divider {
+  flex: 1;
+}
+
+.shopping-cart-button {
+  height: 40px;
+  width: 40px;
+  background: black;
+  padding: 10px;
+  position: relative;
+  margin-right: 40px;
+  border-radius: 100px;
+  border: none;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.store-name {
+  font-size: 32px;
+  color: black;
+}
+
+body {
+  background-image: ;
+}
+
+.sample {
+  height: 100%;
+  width: 100vw;
+  background-size: 100%;
+}
+
+.cactus-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  margin-right: 50px;
+  width: 200px;
+
+  height: calc(100vh - 75px);
+}
+
+.cactus-wrapper > img {
+  width: 100%;
+}
+
+.home-page {
+  display: flex;
+  position: relative;
+}
+
+.shop-now-wrapper {
+  margin-left: 50px;
+
+  color: white;
+  position: absolute;
+  font-size: 60px;
+  top: 0;
+  bottom: 0;
+  font-family: Roboto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.shop-now {
+  padding: 20px;
+  background: black;
+}
