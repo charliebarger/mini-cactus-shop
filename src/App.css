@@ -73,16 +73,14 @@ body {
 
 .sample {
   height: 100%;
-  width: 100vw;
   background-size: 100%;
 }
 
 .cactus-wrapper {
   display: flex;
   align-items: center;
-  margin-left: auto;
-
-  margin-right: 50px;
+  margin-left: 10px;
+  margin-right: 75px;
   width: 200px;
 
   height: calc(100vh - 75px);
@@ -98,21 +96,26 @@ body {
 }
 
 .shop-now-wrapper {
-  margin-left: 50px;
-
+  flex: 1;
+  height: 100vh;
+  margin-left: 0px;
+  font-weight: 100;
   color: white;
-  position: absolute;
-  font-size: 60px;
-  top: 0;
-  bottom: 0;
+  /* position: absolute; */
+  font-size: 50px;
+  /* top: 0;
+  bottom: 0; */
   font-family: Roboto;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .shop-now {
+  margin-right: auto;
+  margin-left: auto;
   padding: 20px;
   background: black;
+  box-shadow: 5px 5px 15px 5px grey;
+  border-radius: 5px;
 }

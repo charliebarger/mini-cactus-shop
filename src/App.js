@@ -9,6 +9,7 @@ function App() {
       </button> */}
       <div className={"home-page"}>
         <div className={"shop-now-wrapper"}>
+          <h1>Welcome to Mini Cactus Market</h1>
           <div className={"shop-now"}>
             <span>Shop Now</span>
           </div>
