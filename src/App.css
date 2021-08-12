@@ -12,12 +12,18 @@ body {
   margin: 0px;
 }
 .nav {
+  background: white;
   display: flex;
   align-items: center;
   font-family: "Bahianita", cursive;
   height: 75px;
-
+  flex-wrap: wrap;
   box-shadow: 0 0 5px grey;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 .nav-item {
@@ -36,6 +42,7 @@ img {
 }
 
 .divider {
+  min-width: 60px;
   flex: 1;
 }
 
@@ -97,6 +104,8 @@ body {
 }
 
 .shop-now-wrapper {
+  padding: 20px;
+  padding-top: 0px;
   flex: 1;
   height: 100%;
   margin-left: 0px;
@@ -128,4 +137,59 @@ h1 {
   text-align: center;
   font-size: 42px;
   font-weight: 300;
+}
+
+.shop-now:hover {
+  background: #88bb3d;
+  transform: scale(0.95);
+  transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .home-page {
+    position: relative;
+  }
+  .shop-now-wrapper {
+    position: absolute;
+    background: rgba(223, 220, 220, 0.5);
+    width: 100%;
+    height: 100vh;
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 32px;
+  }
+  .shop-now {
+    font-size: 22px;
+  }
+  nav {
+    width: 100vw;
+    background: white;
+  }
+  .nav {
+    position: relative;
+    z-index: 100;
+  }
+
+  .img-wrapper {
+    margin-left: auto;
+  }
+
+  .divider {
+    margin: auto;
+    min-width: 0px;
+    flex: 0 0;
+  }
+  .store-name {
+  }
+  nav {
+    height: 75px;
+    justify-content: space-around;
+    box-shadow: 0 4px 2px -2px gray;
+    border-top: 1px solid grey;
+  }
+  .nav-item,
+  .shopping-cart-button {
+    margin: 0px;
+  }
 }
