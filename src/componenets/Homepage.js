@@ -2,7 +2,7 @@ import React from "react";
 
 const Homepage = () => {
   return (
-    <div className={"body-page"}>
+    <div className={"home-page"}>
       <div className={"shop-now-wrapper"}>
         <h1>Welcome to Mini Cactus Market</h1>
         <div className={"shop-now"}>
