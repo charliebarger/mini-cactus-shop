@@ -26,6 +26,12 @@ nav {
   align-items: center;
 }
 
+.company-logo-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .nav-item {
   color: #88bb3d;
   text-decoration: none;
@@ -47,6 +53,7 @@ img {
 }
 
 .shopping-cart-button {
+  cursor: pointer;
   height: 40px;
   width: 40px;
   background: black;
@@ -121,6 +128,7 @@ body {
 }
 
 .shop-now {
+  cursor: pointer;
   margin-right: auto;
   margin-left: auto;
   padding: 10px 15px;
@@ -142,10 +150,19 @@ h1 {
 .shop-now:hover {
   background: #88bb3d;
   transform: scale(0.95);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media only screen and (max-width: 600px) {
+  .store-name {
+    margin-right: 37.5px;
+  }
+  .company-logo-wrapper {
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
   .home-page {
     position: relative;
   }
@@ -176,7 +193,7 @@ h1 {
   }
 
   .divider {
-    margin: auto;
+    margin: none;
     min-width: 0px;
     flex: 0 0;
   }
