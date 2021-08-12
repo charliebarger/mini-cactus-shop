@@ -1,29 +1,21 @@
 import "./App.css";
-import Nav from "./componenets/Nav";
+import Header from "./componenets/Header";
+import Homepage from "./componenets/Homepage";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      {/* <button className={"shopping-cart-button"}>
-        <svg src={process.env.PUBLIC_URL + "/images/shopping-cart.svg"} />
-      </button> */}
-      <div className={"home-page"}>
-        <div className={"shop-now-wrapper"}>
-          <h1>Welcome to Mini Cactus Market</h1>
-          <div className={"shop-now"}>
-            <span>Shop Now</span>
-          </div>
-        </div>
-        <div className="sample">
-          <div className="cactus-wrapper">
-            <img
-              alt={"cactus"}
-              src={process.env.PUBLIC_URL + "/images/cactus-plant.png"}
-            ></img>
-          </div>
-        </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route path="/shop">
+            <span>ITs da shop</span>
+          </Route>
+          <Route exact path="/" component={Homepage} />
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
 
