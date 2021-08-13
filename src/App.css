@@ -156,9 +156,13 @@ h2 {
 .product-wrapper {
   padding: 20px 40px;
   padding-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product {
+  margin: 20px;
   padding-bottom: 10px;
   padding-top: 0px;
   border-left-width: 10px;
