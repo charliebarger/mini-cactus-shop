@@ -9,12 +9,11 @@ const Shop = () => {
           <div className="image-wrapper">
             <img
               alt="cactus"
-              src={process.env.PUBLIC_URL + "/images/cacti/barrel-cactus.jpeg"}
+              src={process.env.PUBLIC_URL + "/images/cacti/barrel-cactus.png"}
             />
           </div>
-          <button className="add-to-cart">Add to Cart</button>
-          <span>Barrel Cactus</span>
-          <span>$12.99</span>
+          <span className="product-name">Barrel Cactus</span>
+          <span className="product-price">$12.99</span>
         </div>
       </div>
     </div>
