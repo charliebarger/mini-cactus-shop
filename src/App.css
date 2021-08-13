@@ -125,6 +125,8 @@ svg {
 }
 
 .shop-now {
+  color: white;
+  text-decoration: none;
   cursor: pointer;
   margin-right: auto;
   margin-left: auto;
@@ -151,7 +153,7 @@ h2 {
 .shop-now:hover {
   background: #88bb3d;
   transform: scale(0.95);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .product-wrapper {
   padding: 20px 10px;
