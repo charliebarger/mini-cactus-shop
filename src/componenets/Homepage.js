@@ -1,16 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import ShopNowButton from "./ShopNowButton";
 const Homepage = () => {
   return (
     <div className={"home-page"}>
       <div className={"shop-now-wrapper"}>
         <h1>Welcome to Mini Cactus Market</h1>
-        <Link to={"/shop"} className={"shop-now"}>
-          <div>
-            <span>Shop Now</span>
-          </div>
-        </Link>
+        <ShopNowButton />
       </div>
       <div className="sample">
         <div className="cactus-wrapper">

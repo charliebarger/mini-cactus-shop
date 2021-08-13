@@ -125,6 +125,9 @@ svg {
 }
 
 .shop-now {
+  font-weight: 100;
+  font-size: 32px;
+  font-family: "Roboto";
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -136,6 +139,10 @@ svg {
   box-shadow: 5px 5px 15px 5px grey;
   border-radius: 5px;
   margin-top: 40px;
+}
+
+.cart-wrapper > .shop-now {
+  margin-top: 20px;
 }
 
 h1 {
@@ -223,6 +230,17 @@ h2 {
   border-radius: 10px;
   height: 100%;
   background: #80808014;
+}
+
+h1.cart-header {
+  margin: 30px;
+  font-size: 38px;
+}
+
+.cart-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 @media only screen and (max-width: 600px) {
   .product {
