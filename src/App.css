@@ -154,7 +154,7 @@ h2 {
   transition: all 0.3s ease-in-out;
 }
 .product-wrapper {
-  padding: 20px 40px;
+  padding: 20px 10px;
   padding-top: 0px;
   display: flex;
   flex-wrap: wrap;
@@ -183,6 +183,7 @@ h2 {
 
 .product > span {
   margin: 5px;
+  text-align: center;
 }
 
 .image-wrapper {
@@ -222,6 +223,14 @@ h2 {
   background: #80808014;
 }
 @media only screen and (max-width: 600px) {
+  .product {
+    width: 150px;
+    margin: 10px;
+  }
+  .image-wrapper {
+    height: 150px;
+  }
+
   .store-name {
     margin-right: 37.5px;
   }
@@ -268,5 +277,18 @@ h2 {
   .nav-item,
   .shopping-cart-button {
     margin: 0px;
+  }
+  .product-name {
+    font-size: 16px;
+  }
+  .product-price {
+    font-size: 22px;
+  }
+  .product-wrapper {
+    padding: 20px 10px;
+    padding-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
