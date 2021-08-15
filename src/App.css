@@ -27,6 +27,11 @@ nav {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .company-logo-wrapper {
   height: 75px;
   display: flex;
@@ -151,6 +156,7 @@ h1 {
 
 h1,
 h2 {
+  font-family: "Roboto";
   color: black;
   text-align: center;
   font-size: 42px;
@@ -286,6 +292,7 @@ h1.cart-page--header {
 }
 
 select {
+  font-family: "Roboto";
   padding: 2.5px;
 }
 
@@ -306,6 +313,7 @@ select {
 }
 
 .checkout-button {
+  cursor: pointer;
   margin-top: 20px;
   font-family: "ROBOTO";
   font-size: 18px;
@@ -314,6 +322,7 @@ select {
   border: none;
   color: white;
 }
+
 .checkout-total {
   font-size: 20px;
   align-self: flex-start;
