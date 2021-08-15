@@ -398,4 +398,12 @@ select {
   .cart-image-wrapper {
     display: none;
   }
+
+  .checkout-wrapper {
+    width: 100%;
+  }
+
+  .checkout-button {
+    align-self: stretch;
+  }
 }
