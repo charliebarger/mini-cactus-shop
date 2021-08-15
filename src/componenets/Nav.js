@@ -9,7 +9,7 @@ const Nav = () => {
       <Link className={"nav-item"} to={"/"}>
         Home
       </Link>
-      <Link to={"cart"}>
+      <Link to={"/cart"}>
         <button className={"shopping-cart-button"}>
           <svg
             height="15pt"
