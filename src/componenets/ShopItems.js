@@ -1,12 +1,13 @@
 import React from "react";
 import products from "../resources/products";
+import { uniqueId } from "lodash";
 import { Link, useRouteMatch } from "react-router-dom";
 const ShopItems = () => {
   const match = useRouteMatch();
   return (
     <div className="product-wrapper">
       {products.map((product) => (
-        <Link to={`${match.url}/${product.skew}`}>
+        <Link key={uniqueId()} to={`${match.url}/${product.skew}`}>
           <div className="product">
             <div className="image-wrapper">
               <img

@@ -27,7 +27,7 @@ const ItemDetailInfo = (props) => {
         ${price}
       </span>
       <div className="quantity">
-        <label for="item-number-select">Quantity</label>
+        <label htmlFor="item-number-select">Quantity</label>
         <SelectQuantity id="item-number-select" number={10} />
       </div>
       <button className="checkout-button item-detail-checkout-button">

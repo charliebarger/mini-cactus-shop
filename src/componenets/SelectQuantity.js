@@ -1,4 +1,5 @@
 import React from "react";
+import { uniqueId } from "lodash";
 
 const SelectQuantity = (props) => {
   const selectItems = [];
@@ -8,7 +9,7 @@ const SelectQuantity = (props) => {
   return (
     <select id={props.id ? props.id : ""}>
       {selectItems.map((item) => (
-        <option>{item}</option>
+        <option key={uniqueId()}>{item}</option>
       ))}
     </select>
   );
