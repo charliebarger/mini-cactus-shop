@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
-          <Route path="/shop/:skew" component={ItemDetail} />
+          <Route path="/shop/:targetSkew" component={ItemDetail} />
           <Route path="/cart" component={ShoppingCartPage} />
           <Route path="/shop" component={Shop} />
 
