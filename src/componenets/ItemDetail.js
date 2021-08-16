@@ -2,26 +2,25 @@ import React from "react";
 import { useParams } from "react-router";
 import { LoremIpsum } from "react-lorem-ipsum";
 import products from "../resources/products";
+import SelectQuantity from "./SelectQuantity";
+
 const ItemDetail = () => {
-  const selectItems = [];
-  for (let i = 1; i < 11; i++) {
-    selectItems.push(i);
-  }
-  const { skew } = useParams();
+  const { targetSkew } = useParams();
+  const { name, price, skew } = findItem();
   function findItem() {
     for (let i = 0; i < products.length; i++) {
-      if (skew === products[i].skew) {
+      if (targetSkew === products[i].skew) {
         return products[i];
       }
     }
   }
-  const item = findItem();
+
   return (
     <div id="details-grid">
       <div className="image-detail-wrapper">
         <img
-          alt={item.name}
-          src={process.env.PUBLIC_URL + `/images/cacti/${item.skew}.png`}
+          alt={name}
+          src={process.env.PUBLIC_URL + `/images/cacti/${skew}.png`}
         />
       </div>
       <div className="item-detail-info">
@@ -29,7 +28,7 @@ const ItemDetail = () => {
           style={{ textTransform: "capitalize" }}
           className="item-detail-title"
         >
-          {item.name}
+          {name}
         </h3>
         <div id="item-details">
           <span>Details : </span>
@@ -39,18 +38,22 @@ const ItemDetail = () => {
             avgWordsPerSentence={8}
           />
         </div>
+        <span
+          style={{
+            fontSize: "20px",
+            color: "rgb(196, 17, 63)",
+            fontWeight: "400",
+          }}
+        >
+          ${price}
+        </span>
         <div className="quantity">
           <label for="item-number-select">Quantity</label>
-          <select id="item-number-select">
-            {selectItems.map((item) => (
-              <option>{item}</option>
-            ))}
-          </select>
+          <SelectQuantity id="item-number-select" number={10} />
         </div>
         <button className="checkout-button item-detail-checkout-button">
           Add to Cart
         </button>
-
         <button className="go-back">Go Back</button>
       </div>
     </div>
