@@ -13,7 +13,7 @@ const ItemDetail = () => {
   }
   const item = findItem();
   return (
-    <div>
+    <div id="details-grid">
       <div className="image-detail-wrapper">
         <img
           alt={item.name}
@@ -22,7 +22,15 @@ const ItemDetail = () => {
       </div>
       <h3>{item.name}</h3>
       <button className="checkout-button">Add to Cart</button>
-      <LoremIpsum p={1} avgSentencesPerParagraph={4} avgWordsPerSentence={8} />
+      <button className="go-back">Go Back</button>
+      <div id="item-details">
+        <span>Details :</span>
+        <LoremIpsum
+          p={1}
+          avgSentencesPerParagraph={4}
+          avgWordsPerSentence={8}
+        />
+      </div>
     </div>
   );
 };

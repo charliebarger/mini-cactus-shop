@@ -331,6 +331,15 @@ select {
   border-bottom: black solid 1px;
   width: 100%;
 }
+
+#details-grid {
+  border: red solid 1px;
+  height: 80vh;
+  display: grid;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr 1fr;
+}
 @media only screen and (max-width: 600px) {
   .product {
     width: 150px;
