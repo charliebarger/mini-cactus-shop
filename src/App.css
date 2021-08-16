@@ -403,6 +403,13 @@ select {
   font-size: 12px;
   font-weight: 100;
   margin-top: auto;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.go-back:hover {
+  color: white;
+  background: black;
 }
 
 button.item-detail-checkout-button {
@@ -508,5 +515,15 @@ button.item-detail-checkout-button {
 
   .checkout-button {
     align-self: stretch;
+  }
+  #details-grid {
+    height: fit-content;
+    flex-direction: column;
+  }
+  .go-back {
+    margin-top: 30px;
+  }
+  button.item-detail-checkout-button {
+    margin-top: 15px;
   }
 }

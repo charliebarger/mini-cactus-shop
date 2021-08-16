@@ -25,7 +25,12 @@ const ItemDetail = () => {
         />
       </div>
       <div className="item-detail-info">
-        <h3 className="item-detail-title">{item.name}</h3>
+        <h3
+          style={{ textTransform: "capitalize" }}
+          className="item-detail-title"
+        >
+          {item.name}
+        </h3>
         <div id="item-details">
           <span>Details : </span>
           <LoremIpsum
