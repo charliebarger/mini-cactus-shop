@@ -1,10 +1,7 @@
 import React from "react";
 import ItemDetailImage from "./ItemDetailImage";
 import { useParams } from "react-router";
-import { LoremIpsum } from "react-lorem-ipsum";
 import products from "../resources/products";
-import SelectQuantity from "./SelectQuantity";
-import { Link } from "react-router-dom";
 import ItemDetailInfo from "./ItemDetailInfo";
 
 const ItemDetail = () => {
