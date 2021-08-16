@@ -6,16 +6,30 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Shop from "./componenets/Shop";
 import ShoppingCartPage from "./componenets/ShoppingCartPage";
 import ItemDetail from "./componenets/ItemDetail";
+import { useState } from "react";
 function App() {
+  const [cart, setCart] = useState([]);
+  console.log(cart);
+  const updateCart = (item) => {
+    let newCart = cart;
+    newCart.push(item);
+    setCart([...newCart]);
+  };
   return (
     <Router>
       <div className="App">
         <Header />
         <Switch>
-          <Route path="/shop/:targetSkew" component={ItemDetail} />
+          {/* <Route
+            path="/shop/:targetSkew"
+            component={ItemDetail}
+            setCart={setCart}
+          /> */}
+          <Route path="/shop/:targetSkew">
+            <ItemDetail setCart={updateCart} />
+          </Route>
           <Route path="/cart" component={ShoppingCartPage} />
           <Route path="/shop" component={Shop} />
-
           <Route exact path="/" component={Homepage} />
         </Switch>
       </div>

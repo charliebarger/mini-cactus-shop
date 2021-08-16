@@ -3,7 +3,8 @@ import { LoremIpsum } from "react-lorem-ipsum";
 import SelectQuantity from "./SelectQuantity";
 import { Link } from "react-router-dom";
 const ItemDetailInfo = (props) => {
-  const { name, price } = props;
+  const { name, price, setCart, item } = props;
+  console.log(props);
   return (
     <div className="item-detail-info">
       <h3 style={{ textTransform: "capitalize" }} className="item-detail-title">
@@ -28,9 +29,16 @@ const ItemDetailInfo = (props) => {
       </span>
       <div className="quantity">
         <label htmlFor="item-number-select">Quantity</label>
-        <SelectQuantity id="item-number-select" number={10} />
+        <SelectQuantity
+          handleChange={() => console.log("hi")}
+          id="item-number-select"
+          number={10}
+        />
       </div>
-      <button className="checkout-button item-detail-checkout-button">
+      <button
+        onClick={() => setCart(item)}
+        className="checkout-button item-detail-checkout-button"
+      >
         Add to Cart
       </button>
       <Link to="/Shop" className="position-go-back">
