@@ -432,6 +432,11 @@ button.item-detail-checkout-button {
 .quantity > select {
   width: 40%;
 }
+
+.position-go-back {
+  align-self: center;
+  margin-top: auto;
+}
 @media only screen and (max-width: 600px) {
   .product {
     width: 150px;

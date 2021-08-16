@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { LoremIpsum } from "react-lorem-ipsum";
 import products from "../resources/products";
 import SelectQuantity from "./SelectQuantity";
+import { Link } from "react-router-dom";
 
 const ItemDetail = () => {
   const { targetSkew } = useParams();
@@ -54,7 +55,9 @@ const ItemDetail = () => {
         <button className="checkout-button item-detail-checkout-button">
           Add to Cart
         </button>
-        <button className="go-back">Go Back</button>
+        <Link to="/Shop" className="position-go-back">
+          <button className="go-back">Go Back</button>
+        </Link>
       </div>
     </div>
   );
