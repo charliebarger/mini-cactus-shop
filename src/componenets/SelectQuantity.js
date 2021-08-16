@@ -3,7 +3,7 @@ import { uniqueId } from "lodash";
 
 const SelectQuantity = (props) => {
   const selectItems = [];
-  for (let i = 1; i < props.number; i++) {
+  for (let i = 1; i < props.number + 1; i++) {
     selectItems.push(i);
   }
   return (
