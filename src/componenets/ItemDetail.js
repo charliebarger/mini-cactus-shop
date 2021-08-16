@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, useRouteMatch } from "react-router";
+import { useParams } from "react-router";
 import { LoremIpsum } from "react-lorem-ipsum";
 import products from "../resources/products";
 const ItemDetail = () => {
