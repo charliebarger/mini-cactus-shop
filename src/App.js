@@ -9,11 +9,24 @@ import ItemDetail from "./componenets/ItemDetail";
 import { useState } from "react";
 function App() {
   const [cart, setCart] = useState([]);
-  console.log(cart);
-  const updateCart = (item) => {
-    let newCart = cart;
-    item.quantity = 1;
+
+  const filterDuplicates = (item) => {
+    const newCart = cart;
+    for (let i = 0; i < newCart.length; i++) {
+      if (newCart[i].skew === item.skew) {
+        newCart[i].quantity =
+          newCart[i].quantity > item.quantity
+            ? newCart[i].quantity
+            : item.quantity;
+        return newCart;
+      }
+    }
     newCart.push(item);
+    return newCart;
+  };
+
+  const updateCart = (item) => {
+    let newCart = filterDuplicates(item);
     setCart([...newCart]);
   };
 
