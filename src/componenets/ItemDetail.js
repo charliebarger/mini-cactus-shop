@@ -5,7 +5,6 @@ import products from "../resources/products";
 import ItemDetailInfo from "./ItemDetailInfo";
 
 const ItemDetail = (props) => {
-  console.log(props);
   const { targetSkew } = useParams();
   const AddedItem = findItem();
   const { name, price, skew } = findItem();
@@ -24,7 +23,6 @@ const ItemDetail = (props) => {
         price={price}
         setCart={props.setCart}
         item={AddedItem}
-        setAmount={props.setQuantity}
       />
     </div>
   );
