@@ -4,9 +4,9 @@ import SelectQuantity from "./SelectQuantity";
 import { Link } from "react-router-dom";
 const ItemDetailInfo = (props) => {
   const { name, price, setCart, item } = props;
-  const setQuantity = (quantity) => {
-    item.quantity = quantity;
-  };
+  // const setQuantity = (quantity) => {
+  //   item.quantity = quantity;
+  // };
   return (
     <div className="item-detail-info">
       <h3 style={{ textTransform: "capitalize" }} className="item-detail-title">
@@ -32,7 +32,8 @@ const ItemDetailInfo = (props) => {
       <div className="quantity">
         <label htmlFor="item-number-select">Quantity</label>
         <SelectQuantity
-          addQuantity={setQuantity}
+          item={item}
+          addQuantity={props.setQuantity}
           id="item-number-select"
           number={10}
         />
