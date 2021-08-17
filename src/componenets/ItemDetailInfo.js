@@ -6,7 +6,6 @@ const ItemDetailInfo = (props) => {
   const { name, price, setCart, item } = props;
   const setQuantity = (quantity) => {
     item.quantity = quantity;
-    console.log(item);
   };
   return (
     <div className="item-detail-info">

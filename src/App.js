@@ -7,6 +7,7 @@ import Shop from "./componenets/Shop";
 import ShoppingCartPage from "./componenets/ShoppingCartPage";
 import ItemDetail from "./componenets/ItemDetail";
 import { useState } from "react";
+
 function App() {
   const [cart, setCart] = useState([]);
 
@@ -14,10 +15,7 @@ function App() {
     const newCart = cart;
     for (let i = 0; i < newCart.length; i++) {
       if (newCart[i].skew === item.skew) {
-        newCart[i].quantity =
-          newCart[i].quantity > item.quantity
-            ? newCart[i].quantity
-            : item.quantity;
+        newCart[i].quantity = item.quantity;
         return newCart;
       }
     }
@@ -26,8 +24,15 @@ function App() {
   };
 
   const updateCart = (item) => {
-    let newCart = filterDuplicates(item);
-    setCart([...newCart]);
+    const newItem = item;
+    // const newItem = {
+    //   skew: item.skew,
+    //   name: item.name,
+    //   price: item.price,
+    //   quantity: item.quantity,
+    // };
+    let newCart = filterDuplicates(newItem);
+    setCart(newCart);
   };
 
   return (
