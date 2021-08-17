@@ -1,14 +1,24 @@
 import React from "react";
 import { uniqueId } from "lodash";
+import { useState, useEffect } from "react";
 
 const SelectQuantity = (props) => {
-  console.log(props);
+  const [quantity, setQuantity] = useState(1);
+  const addQuantity = props.addQuantity;
+
+  useEffect(() => {
+    addQuantity(quantity);
+  }, [quantity, addQuantity]);
+
   const selectItems = [];
   for (let i = 1; i < props.number + 1; i++) {
     selectItems.push(i);
   }
   return (
-    <select onChange={() => console.log(this)} id={props.id ? props.id : ""}>
+    <select
+      value={quantity}
+      onChange={(e) => setQuantity(Number(e.target.value))}
+    >
       {selectItems.map((item) => (
         <option key={uniqueId()}>{item}</option>
       ))}

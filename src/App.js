@@ -12,7 +12,18 @@ function App() {
   console.log(cart);
   const updateCart = (item) => {
     let newCart = cart;
+    item.quantity = 1;
     newCart.push(item);
+    setCart([...newCart]);
+  };
+
+  const setQuantity = (skew, quantity) => {
+    let newCart = cart;
+    newCart.forEach((element) => {
+      if (skew === element.skew) {
+        element.quantity = quantity;
+      }
+    });
     setCart([...newCart]);
   };
   return (
@@ -20,13 +31,8 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
-          {/* <Route
-            path="/shop/:targetSkew"
-            component={ItemDetail}
-            setCart={setCart}
-          /> */}
           <Route path="/shop/:targetSkew">
-            <ItemDetail setCart={updateCart} />
+            <ItemDetail setCart={updateCart} setQuantity={setQuantity} />
           </Route>
           <Route path="/cart" component={ShoppingCartPage} />
           <Route path="/shop" component={Shop} />

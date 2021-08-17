@@ -24,6 +24,7 @@ const ItemDetail = (props) => {
         price={price}
         setCart={props.setCart}
         item={AddedItem}
+        setAmount={props.setQuantity}
       />
     </div>
   );
