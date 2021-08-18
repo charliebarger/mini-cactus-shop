@@ -33,7 +33,13 @@ const CartItems = (props) => {
               addQuantity={props.updateQuantity}
               skew={item.skew}
             />
-            <button onClick={() => props.removeItem(item.skew)}>Delete</button>
+
+            <img
+              className="trashcan"
+              onClick={() => props.removeItem(item.skew)}
+              alt={"Trash"}
+              src={process.env.PUBLIC_URL + `/images/trash.png`}
+            />
           </div>
           <span>${item.totalCost}</span>
         </div>
