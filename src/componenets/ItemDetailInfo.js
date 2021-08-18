@@ -11,7 +11,7 @@ const ItemDetailInfo = (props) => {
 
   function setCartandQuantity() {
     setCart(item);
-    props.updateQuantity(item.skew, item.quantity);
+    props.updateQuantity(item.quantity, item.skew);
   }
   return (
     <div className="item-detail-info">

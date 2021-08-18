@@ -26,7 +26,7 @@ const CartItems = (props) => {
               placeHolder={item.quantity}
               number={10}
               addQuantity={props.updateQuantity}
-              item={item}
+              skew={item.skew}
             />
           </div>
           <span>{item.price}</span>

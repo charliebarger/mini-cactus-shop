@@ -17,7 +17,7 @@ function App() {
     }
   }
 
-  function updateQuantity(skew, quantity) {
+  function updateQuantity(quantity, skew) {
     console.log(skew, quantity);
     for (let i = 0; i < cart.length; i++) {
       if (cart[i].skew === skew && cart[i].quantity !== quantity) {
@@ -38,9 +38,8 @@ function App() {
             <ItemDetail setCart={updateCart} updateQuantity={updateQuantity} />
           </Route>
           <Route path="/cart">
-            <ItemDetail items={cart} updateQuantity={updateQuantity} />
+            <ShoppingCartPage items={cart} updateQuantity={updateQuantity} />
           </Route>
-          <Route path="/cart" component={ShoppingCartPage} />
           <Route path="/shop" component={Shop} />
           <Route exact path="/" component={Homepage} />
         </Switch>
