@@ -18,7 +18,7 @@ const CartItems = (props) => {
                 src={process.env.PUBLIC_URL + `/images/cacti/${item.skew}.png`}
               />
             </div>
-            <span className="cart-item-name">Barrel Cactus</span>
+            <span className="cart-item-name">{item.name}</span>
           </div>
           <span>{item.price}</span>
           <div>
