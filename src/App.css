@@ -271,12 +271,6 @@ h1.cart-page--header {
   font-weight: 400;
 }
 
-.cart-header {
-  background-color: #f6f6f6;
-  font-weight: 500;
-  font-size: 14px;
-}
-
 .cart-image-wrapper {
   width: 100px;
   height: 100px;
@@ -327,6 +321,11 @@ select {
   background: #039be5;
   border: none;
   color: white;
+}
+
+.checkout-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 5px 5px 15px 0px grey;
 }
 
 .checkout-total {

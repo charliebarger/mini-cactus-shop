@@ -3,7 +3,7 @@ import ShopNowButton from "./ShopNowButton";
 const EmptyCart = () => {
   return (
     <div className={"cart-wrapper"}>
-      <h1 className={"cart-header"}>Your Cart Is Empty</h1>
+      <h2>Your Cart Is Empty</h2>
       <ShopNowButton />
     </div>
   );
