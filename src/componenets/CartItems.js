@@ -18,9 +18,14 @@ const CartItems = (props) => {
                 src={process.env.PUBLIC_URL + `/images/cacti/${item.skew}.png`}
               />
             </div>
-            <span className="cart-item-name">{item.name}</span>
+            <span
+              className="cart-item-name"
+              style={{ textTransform: "capitalize" }}
+            >
+              {item.name}
+            </span>
           </div>
-          <span>{item.price}</span>
+          <span>${item.price}</span>
           <div>
             <SelectQuantity
               placeHolder={item.quantity}
@@ -29,7 +34,7 @@ const CartItems = (props) => {
               skew={item.skew}
             />
           </div>
-          <span>{item.price}</span>
+          <span>${item.totalCost}</span>
         </div>
       ))}
     </div>

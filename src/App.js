@@ -13,9 +13,17 @@ function App() {
   console.log(cart);
   function updateCart(item) {
     if (!cart.some((value) => value.skew === item.skew)) {
-      setCart([...cart, { ...item }]);
+      setCart([
+        ...cart,
+        { ...item, totalCost: findTotalCost(item.quantity, item.price) },
+      ]);
     }
   }
+
+  const findTotalCost = (quantity, price) => {
+    const totalCost = (quantity * price).toFixed(2);
+    return totalCost;
+  };
 
   function updateQuantity(quantity, skew) {
     console.log(skew, quantity);
@@ -23,6 +31,7 @@ function App() {
       if (cart[i].skew === skew && cart[i].quantity !== quantity) {
         let newQuantity = [...cart];
         newQuantity[i].quantity = quantity;
+        newQuantity[i].totalCost = findTotalCost(quantity, cart[i].price);
         setCart(newQuantity);
         break;
       }
