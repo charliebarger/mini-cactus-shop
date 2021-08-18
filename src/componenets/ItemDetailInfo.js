@@ -32,6 +32,7 @@ const ItemDetailInfo = (props) => {
       <div className="quantity">
         <label htmlFor="item-number-select">Quantity</label>
         <SelectQuantity
+          update={false}
           item={item}
           addQuantity={props.setQuantity}
           id="item-number-select"

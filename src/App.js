@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./componenets/Header";
 import Homepage from "./componenets/Homepage";
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Shop from "./componenets/Shop";
 import ShoppingCartPage from "./componenets/ShoppingCartPage";
@@ -10,7 +10,10 @@ import { useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
-  console.log(cart);
+
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
 
   const filterDuplicates = (item) => {
     const newItem = {
@@ -34,11 +37,15 @@ function App() {
     console.log(cart);
     const newItem = item;
     let newCart = filterDuplicates(newItem);
-    setCart(newCart);
+    setCart([...newCart]);
   };
 
-  const setQuantity = (item, quantity) => {
+  const setQuantity = (item, quantity, update) => {
+    console.log(update);
     item.quantity = quantity;
+    if (update) {
+      updateCart(item);
+    }
     return item;
   };
   return (
@@ -50,7 +57,11 @@ function App() {
             <ItemDetail setCart={updateCart} setQuantity={setQuantity} />
           </Route>
           <Route path="/cart">
-            <ShoppingCartPage items={cart} setQuantity={setQuantity} />
+            <ShoppingCartPage
+              updateCart={updateCart}
+              items={cart}
+              setQuantity={setQuantity}
+            />
           </Route>
           <Route path="/shop" component={Shop} />
           <Route exact path="/" component={Homepage} />

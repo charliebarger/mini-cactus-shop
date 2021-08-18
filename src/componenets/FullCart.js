@@ -11,7 +11,11 @@ const FullCart = (props) => {
   return (
     <div className={"cart-wrapper"}>
       <h2 className={"cart-page-header"}>Your Cart</h2>
-      <CartItems items={props.items} setQuantity={props.setQuantity} />
+      <CartItems
+        updateCart={props.updateCart}
+        items={props.items}
+        setQuantity={props.setQuantity}
+      />
       <CartCheckout />
     </div>
   );

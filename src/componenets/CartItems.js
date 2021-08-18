@@ -24,6 +24,7 @@ const CartItems = (props) => {
           <span>{item.price}</span>
           <div>
             <SelectQuantity
+              update={true}
               placeHolder={item.quantity}
               number={10}
               addQuantity={props.setQuantity}

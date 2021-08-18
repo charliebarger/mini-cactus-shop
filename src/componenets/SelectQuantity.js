@@ -3,16 +3,16 @@ import { uniqueId } from "lodash";
 import { useState, useEffect } from "react";
 
 const SelectQuantity = (props) => {
-  console.log(props.placeHolder);
   const [quantity, setQuantity] = useState(
     props.placeHolder ? props.placeHolder : 1
   );
 
-  const { addQuantity, item } = props;
-  console.log(addQuantity);
+  const { addQuantity, item, update } = props;
+
+  console.log(props.updateCart);
   useEffect(() => {
-    addQuantity(item, quantity);
-  }, [quantity, addQuantity, item]);
+    addQuantity(item, quantity, update);
+  }, [quantity, addQuantity, item, update]);
 
   const selectItems = [];
   for (let i = 1; i < props.number + 1; i++) {

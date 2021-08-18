@@ -7,7 +7,7 @@ const ShoppingCartPage = (props) => {
     <div>
       {!props.items.length < 1 ? (
         <FullCart
-          setCart={props.updateCart}
+          updateCart={props.updateCart}
           setQuantity={props.setQuantity}
           items={props.items}
         />
