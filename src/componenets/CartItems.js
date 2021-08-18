@@ -33,6 +33,7 @@ const CartItems = (props) => {
               addQuantity={props.updateQuantity}
               skew={item.skew}
             />
+            <button onClick={() => props.removeItem(item.skew)}>Delete</button>
           </div>
           <span>${item.totalCost}</span>
         </div>

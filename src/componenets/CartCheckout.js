@@ -18,7 +18,12 @@ const CartCheckout = (props) => {
         <span>Total : </span>
         <span>${totalCost}</span>
       </div>
-      <button className="checkout-button">Proceed to Checkout</button>
+      <button
+        onClick={() => alert("Thanks for Shopping!")}
+        className="checkout-button"
+      >
+        Proceed to Checkout
+      </button>
     </div>
   );
 };

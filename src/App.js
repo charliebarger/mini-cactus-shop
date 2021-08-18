@@ -38,6 +38,13 @@ function App() {
     }
   }
 
+  function removeItem(skew) {
+    console.log(cart[0].skew === skew);
+    let newCart = cart.filter((item) => item.skew !== skew);
+    console.log(newCart);
+    setCart(newCart);
+  }
+
   return (
     <Router>
       <div className="App">
@@ -47,7 +54,11 @@ function App() {
             <ItemDetail setCart={updateCart} updateQuantity={updateQuantity} />
           </Route>
           <Route path="/cart">
-            <ShoppingCartPage items={cart} updateQuantity={updateQuantity} />
+            <ShoppingCartPage
+              removeItem={removeItem}
+              items={cart}
+              updateQuantity={updateQuantity}
+            />
           </Route>
           <Route path="/shop" component={Shop} />
           <Route exact path="/" component={Homepage} />

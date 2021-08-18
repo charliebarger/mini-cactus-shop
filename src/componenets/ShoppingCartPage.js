@@ -6,7 +6,11 @@ const ShoppingCartPage = (props) => {
     return <EmptyCart />;
   } else {
     return (
-      <FullCart items={props.items} updateQuantity={props.updateQuantity} />
+      <FullCart
+        removeItem={props.removeItem}
+        items={props.items}
+        updateQuantity={props.updateQuantity}
+      />
     );
   }
 };
