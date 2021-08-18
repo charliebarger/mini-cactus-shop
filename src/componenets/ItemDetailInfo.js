@@ -1,5 +1,4 @@
 import React from "react";
-import { LoremIpsum } from "react-lorem-ipsum";
 import SelectQuantity from "./SelectQuantity";
 import { Link } from "react-router-dom";
 const ItemDetailInfo = (props) => {
@@ -20,11 +19,7 @@ const ItemDetailInfo = (props) => {
       </h3>
       <div id="item-details">
         <span>Details : </span>
-        <LoremIpsum
-          p={1}
-          avgSentencesPerParagraph={4}
-          avgWordsPerSentence={8}
-        />
+        <span>{item.details}</span>
       </div>
       <span
         style={{
