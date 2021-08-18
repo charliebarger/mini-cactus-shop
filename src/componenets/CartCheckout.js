@@ -6,7 +6,7 @@ const CartCheckout = (props) => {
     if (props.items.length > 0) {
       let cost = props.items.reduce((sum, { totalCost }) => sum + totalCost, 0);
       console.log(Number(cost));
-      setTotalCost(Number(cost));
+      setTotalCost(Number(cost.toFixed(2)));
     }
   }, [props.items, setTotalCost]);
   return (
