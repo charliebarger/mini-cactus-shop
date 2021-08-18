@@ -37,6 +37,9 @@ function App() {
           <Route path="/shop/:targetSkew">
             <ItemDetail setCart={updateCart} updateQuantity={updateQuantity} />
           </Route>
+          <Route path="/cart">
+            <ItemDetail items={cart} updateQuantity={updateQuantity} />
+          </Route>
           <Route path="/cart" component={ShoppingCartPage} />
           <Route path="/shop" component={Shop} />
           <Route exact path="/" component={Homepage} />

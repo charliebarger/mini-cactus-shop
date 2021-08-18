@@ -1,16 +1,11 @@
 import React from "react";
 import CartCheckout from "./CartCheckout";
 import CartItems from "./CartItems";
-const FullCart = () => {
-  const selectItems = [];
-  for (let i = 1; i < 11; i++) {
-    selectItems.push(i);
-  }
-
+const FullCart = (props) => {
   return (
     <div className={"cart-wrapper"}>
       <h2 className={"cart-page-header"}>Your Cart</h2>
-      <CartItems />
+      <CartItems updateQuantity={props.updateQuantity} items={props.items} />
       <CartCheckout />
     </div>
   );
