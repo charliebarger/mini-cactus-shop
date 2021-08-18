@@ -21,7 +21,7 @@ function App() {
   }
 
   const findTotalCost = (quantity, price) => {
-    const totalCost = (quantity * price).toFixed(2);
+    const totalCost = Number((quantity * price).toFixed(2));
     return totalCost;
   };
 

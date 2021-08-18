@@ -6,7 +6,7 @@ const FullCart = (props) => {
     <div className={"cart-wrapper"}>
       <h2 className={"cart-page-header"}>Your Cart</h2>
       <CartItems updateQuantity={props.updateQuantity} items={props.items} />
-      <CartCheckout />
+      <CartCheckout items={props.items} />
     </div>
   );
 };
