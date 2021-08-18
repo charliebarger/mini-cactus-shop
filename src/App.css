@@ -256,7 +256,8 @@ h1.cart-page--header {
   font-family: "ROBOTO";
 
   display: grid;
-  grid-template-columns: 4fr 1fr 1fr 1fr;
+  grid-template-columns: 4fr 90px 120px 90px;
+  grid-template-columns: 4fr repeat(3, minmax(100px, 1fr));
   grid-row-gap: 1px;
   grid-auto-rows: minmax(40px, auto);
 }
@@ -298,6 +299,11 @@ select {
 
 .cart-grid > *:nth-last-child(-n + 4) {
   border-bottom: #e4e4e4 1px solid;
+}
+
+.trashcan {
+  cursor: pointer;
+  margin-left: 10px;
 }
 
 .checkout-wrapper {
@@ -438,6 +444,9 @@ button.item-detail-checkout-button {
   margin-top: auto;
 }
 @media only screen and (max-width: 600px) {
+  .cart-grid {
+    grid-template-columns: 4fr 70px 100px 70px;
+  }
   .product {
     width: 150px;
     margin: 10px;
