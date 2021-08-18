@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 const SelectQuantity = (props) => {
   const [quantity, setQuantity] = useState(1);
   const addQuantity = props.addQuantity;
-
+  console.log(props.skew);
   useEffect(() => {
-    addQuantity(quantity);
-  }, [quantity, addQuantity]);
+    addQuantity(quantity, props.skew);
+  }, [quantity, addQuantity, props.skew]);
 
   const selectItems = [];
   for (let i = 1; i < props.number + 1; i++) {

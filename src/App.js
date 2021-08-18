@@ -10,30 +10,24 @@ import { useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
+  console.log(cart);
+  function updateCart(item) {
+    if (!cart.some((value) => value.skew === item.skew)) {
+      setCart([...cart, { ...item }]);
+    }
+  }
 
-  const filterDuplicates = (item) => {
-    const newCart = cart;
-    for (let i = 0; i < newCart.length; i++) {
-      if (newCart[i].skew === item.skew) {
-        newCart[i].quantity = item.quantity;
-        return newCart;
+  function updateQuantity(skew, quantity) {
+    console.log(skew, quantity);
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].skew === skew && cart[i].quantity !== quantity) {
+        let newQuantity = [...cart];
+        newQuantity[i].quantity = quantity;
+        setCart(newQuantity);
+        break;
       }
     }
-    newCart.push(item);
-    return newCart;
-  };
-
-  const updateCart = (item) => {
-    const newItem = item;
-    // const newItem = {
-    //   skew: item.skew,
-    //   name: item.name,
-    //   price: item.price,
-    //   quantity: item.quantity,
-    // };
-    let newCart = filterDuplicates(newItem);
-    setCart(newCart);
-  };
+  }
 
   return (
     <Router>
@@ -41,7 +35,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/shop/:targetSkew">
-            <ItemDetail setCart={updateCart} />
+            <ItemDetail setCart={updateCart} updateQuantity={updateQuantity} />
           </Route>
           <Route path="/cart" component={ShoppingCartPage} />
           <Route path="/shop" component={Shop} />

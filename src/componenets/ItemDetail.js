@@ -6,8 +6,7 @@ import ItemDetailInfo from "./ItemDetailInfo";
 
 const ItemDetail = (props) => {
   const { targetSkew } = useParams();
-  const AddedItem = findItem();
-  const { name, price, skew } = findItem();
+  const addedItem = findItem();
   function findItem() {
     for (let i = 0; i < products.length; i++) {
       if (targetSkew === products[i].skew) {
@@ -17,12 +16,11 @@ const ItemDetail = (props) => {
   }
   return (
     <div id="details-grid">
-      <ItemDetailImage skew={skew} name={name} />
+      <ItemDetailImage skew={addedItem.skew} name={addedItem.name} />
       <ItemDetailInfo
-        name={name}
-        price={price}
         setCart={props.setCart}
-        item={AddedItem}
+        item={addedItem}
+        updateQuantity={props.updateQuantity}
       />
     </div>
   );
