@@ -11,7 +11,6 @@ import { useState } from "react";
 function App() {
   const [cart, setCart] = useState([]);
 
-  console.log(cart);
   function updateCart(item) {
     if (!cart.some((value) => value.skew === item.skew)) {
       setCart([
@@ -39,9 +38,7 @@ function App() {
   }
 
   function removeItem(skew) {
-    console.log(cart[0].skew === skew);
     let newCart = cart.filter((item) => item.skew !== skew);
-    console.log(newCart);
     setCart(newCart);
   }
 
