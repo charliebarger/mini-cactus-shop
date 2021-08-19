@@ -43,7 +43,7 @@ function App() {
   }
 
   return (
-    <Router basename="/">
+    <Router>
       <div className="App">
         <Header items={cart} />
         <Switch>
