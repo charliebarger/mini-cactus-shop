@@ -342,6 +342,17 @@ select {
   font-family: "Roboto";
 }
 
+#proceed-button {
+  color: white;
+  background-color: black;
+  margin-right: 10px;
+}
+
+#proceed-button:hover {
+  color: black;
+  background-color: white;
+}
+
 .checkout-total {
   font-size: 20px;
   align-self: flex-start;

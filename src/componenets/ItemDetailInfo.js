@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SelectQuantity from "./SelectQuantity";
 import { Link } from "react-router-dom";
 const ItemDetailInfo = (props) => {
-  console.log("rerender");
+  const [showButton, setShowButton] = useState(false);
   const { setCart, item } = props;
   const setQuantity = (quantity) => {
     item.quantity = quantity;
@@ -40,14 +40,26 @@ const ItemDetailInfo = (props) => {
         />
       </div>
       <button
-        onClick={() => setCartandQuantity()}
+        onClick={() => {
+          setCartandQuantity();
+          setShowButton(true);
+        }}
         className="checkout-button item-detail-checkout-button"
       >
         Add to Cart
       </button>
-      <Link to="/Shop" className="position-go-back">
-        <button className="go-back">Go Back</button>
-      </Link>
+      <div className="position-go-back">
+        {showButton && (
+          <Link to="/cart">
+            <button id="proceed-button" className="go-back">
+              Proceed to checkout
+            </button>
+          </Link>
+        )}
+        <Link to="/Shop" className="position-go-back">
+          <button className="go-back">Go Back</button>
+        </Link>
+      </div>
     </div>
   );
 };
