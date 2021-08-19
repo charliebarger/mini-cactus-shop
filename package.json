@@ -1,8 +1,8 @@
 {
+  "homepage": "https://charliebarger.github.io/mini-cactus-shop/",
   "name": "mini-cactus-shop",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://charliebarger.github.io/mini-cactus-shop",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -14,7 +14,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
