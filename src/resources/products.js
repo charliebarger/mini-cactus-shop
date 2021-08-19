@@ -22,6 +22,7 @@ const lorem = new LoremIpsum({
 
 products.forEach((product) => {
   product.details = lorem.generateSentences(5);
+  product.price = product.price.toFixed(2);
 });
 
 export default products;
