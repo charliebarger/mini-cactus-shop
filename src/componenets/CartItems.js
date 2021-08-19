@@ -10,7 +10,7 @@ const CartItems = (props) => {
         <span className="cart-header">Item Total</span>
       </div>
       {props.items.map((item) => (
-        <div className="cart-grid">
+        <div key={item.skew} className="cart-grid">
           <div className="item-section">
             <div className="cart-image-wrapper">
               <img
