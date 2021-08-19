@@ -39,7 +39,7 @@ An imaginary e-commerce site with shopping cart capabilities.
 
 ### Libraries, extensions and tools
  - [React Router](https://www.npmjs.com/package/react-router-dom) - Router Tool for React
- - [LoremIpsum](https://www.npmjs.com/package/lorem-ipsum) - Lorem Ipsum Generator 
+ - [Lorem Ipsum](https://www.npmjs.com/package/lorem-ipsum) - Lorem Ipsum Generator 
  - [removebg](https://www.remove.bg/upload) - Background Removal Tool
 
 ### More Information 
