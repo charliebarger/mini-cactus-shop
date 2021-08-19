@@ -1,7 +1,7 @@
 import React from "react";
 import CartButton from "./CartButton";
 import { Link } from "react-router-dom";
-const Nav = () => {
+const Nav = (props) => {
   return (
     <nav>
       <Link className={"nav-item"} to={"/shop"}>
@@ -11,7 +11,7 @@ const Nav = () => {
         Home
       </Link>
       <Link to={"/cart"}>
-        <CartButton />
+        <CartButton items={props.items} />
       </Link>
     </nav>
   );

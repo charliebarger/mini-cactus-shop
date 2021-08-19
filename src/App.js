@@ -10,6 +10,7 @@ import { useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
+
   console.log(cart);
   function updateCart(item) {
     if (!cart.some((value) => value.skew === item.skew)) {
@@ -48,7 +49,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Header items={cart} />
         <Switch>
           <Route path="/shop/:targetSkew">
             <ItemDetail setCart={updateCart} updateQuantity={updateQuantity} />
