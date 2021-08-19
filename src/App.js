@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./componenets/Header";
 import Homepage from "./componenets/Homepage";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Shop from "./componenets/Shop";
 import ShoppingCartPage from "./componenets/ShoppingCartPage";
 import ItemDetail from "./componenets/ItemDetail";
@@ -43,7 +43,7 @@ function App() {
   }
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename="/">
       <div className="App">
         <Header items={cart} />
         <Switch>
