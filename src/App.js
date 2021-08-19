@@ -27,7 +27,6 @@ function App() {
   };
 
   function updateQuantity(quantity, skew) {
-    console.log(skew, quantity);
     for (let i = 0; i < cart.length; i++) {
       if (cart[i].skew === skew && cart[i].quantity !== quantity) {
         let newQuantity = [...cart];

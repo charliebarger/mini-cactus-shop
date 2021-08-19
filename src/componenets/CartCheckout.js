@@ -8,7 +8,6 @@ const CartCheckout = (props) => {
         (sum, { totalCost }) => sum + Number(totalCost),
         0
       );
-      console.log(Number(cost));
       setTotalCost(cost.toFixed(2));
     }
   }, [props.items, setTotalCost]);

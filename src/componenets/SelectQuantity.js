@@ -7,7 +7,6 @@ const SelectQuantity = (props) => {
     props.placeHolder ? props.placeHolder : 1
   );
   const addQuantity = props.addQuantity;
-  console.log(props.skew);
   useEffect(() => {
     addQuantity(quantity, props.skew);
   }, [quantity, addQuantity, props.skew]);
